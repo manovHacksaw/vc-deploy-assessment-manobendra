@@ -130,3 +130,27 @@ Different environments allow developers to **test and release code safely**:
 
 ---
 
+## IV. Bonus Tasks
+
+### `.gitignore` Configuration
+
+The `.gitignore` file is configured to exclude common temporary files, ensuring only source code is tracked in the repository. Excluded items include:
+
+  * `node_modules`
+  * `.env` files
+  * Build artifacts (e.g., `.next`, `build`, `dist`)
+  
+
+-----
+
+### Advanced Multi-Environment Setup
+
+The project is configured for a robust multi-environment workflow on Vercel. Each branch is automatically deployed to a specific environment with its own configuration.
+
+| Branch | Environment | Visual Theme | `NEXT_PUBLIC_ENV` Variable | Deployment URL |
+| :--- | :--- | :--- | :--- | :--- |
+| **`main`** | Production | Dark | `production` | [Main Vercel URL](https://www.google.com/search?q=https://vc-deploy-assessment-manobendra.vercel.app/) |
+| **`dev`** | Preview/Dev | Blue | `development` | [**Live Preview**](https://vc-deploy-assessment-git-dev-manobendra-mandals-projects.vercel.app/) |
+| **`test`** | Preview/Test | Orange | `test` | [**Live Preview**](https://vc-deploy-assessment-git-test-manobendra-mandals-projects.vercel.app/) |
+
+The **`dev`** and **`test`** branches have distinct UI changes (themes) and environment variable values to clearly demonstrate and verify environment-specific behavior during the development and QA process.
